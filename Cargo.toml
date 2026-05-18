@@ -72,7 +72,9 @@ unnecessary_safety_comment = "warn"
 unnecessary_safety_doc = "warn"
 unnecessary_struct_initialization = "warn"
 unneeded_field_pattern = "warn"
-unsafe_code = "forbid"
 unseparated_literal_suffix = "warn"
 unused_peekable = "warn"
 use_self = "warn"
+
+[lints.rust]
+unsafe_code = "forbid"
