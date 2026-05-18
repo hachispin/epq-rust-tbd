@@ -1,19 +1,34 @@
 use three_d::{
-    Camera, ClearState, ColorMaterial, CpuMesh, FrameOutput, Geometry, Gm, Indices, Mesh,
-    Positions, Quat, Rotation3, Srgba, Window, WindowSettings, degrees, radians, vec3,
+    Camera,
+    ClearState,
+    ColorMaterial,
+    CpuMesh,
+    FrameOutput,
+    Geometry,
+    Gm,
+    Indices,
+    Mesh,
+    Positions,
+    Quat,
+    Rotation3,
+    Window,
+    WindowSettings,
+    degrees,
+    radians,
+    vec3,
 };
 
 /// Width of grid lines in units.
 const LINE_WIDTH: f32 = 1.0;
 
-/// Rotates a triangle.
+/// Rotates a rectangle.
 ///
 /// # Panics
 ///
 /// Window failed to be created.
 pub fn main() {
     let window = Window::new(WindowSettings {
-        title: "Triangle!".to_string(),
+        title: "Rectangle".to_string(),
         max_size: Some((1280, 720)),
         ..Default::default()
     })
@@ -43,7 +58,6 @@ pub fn main() {
 
     let indices = Indices::U8(vec![0, 1, 2, 1, 2, 3]);
 
-    // redundant field names lint doesn't trigger
     let cpu_mesh = CpuMesh {
         positions,
         indices,
