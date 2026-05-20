@@ -71,7 +71,7 @@ pub fn main() {
         camera.set_viewport(frame_input.viewport);
 
         #[expect(
-            clippy::as_conversions,
+            clippy::cast_possible_truncation,
             reason = "f32 works for anything under ~1e28 years"
         )]
         model.animate(frame_input.accumulated_time as f32);
